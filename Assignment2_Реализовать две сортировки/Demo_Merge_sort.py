@@ -1,4 +1,4 @@
-rom sorts import bubble_sort, merge_sort
+from sorts import merge_sort
 
 def main():
   
