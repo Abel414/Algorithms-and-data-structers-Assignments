@@ -2,7 +2,7 @@ import unittest
 from comp_swap_container import CompSwapList
 import sortings
 
-class TestSorting(unittest.TestCase):
+class TestBubbleSort(unittest.TestCase):
     
     def test_bubble_sort(self):
         
@@ -18,3 +18,5 @@ class TestSorting(unittest.TestCase):
             data = CompSwapList(inp)
             sortings.bubble_sort(data)
             self.assertEqual(list(data), exp)
+if __name__ == "__main__":
+    unittest.main()
