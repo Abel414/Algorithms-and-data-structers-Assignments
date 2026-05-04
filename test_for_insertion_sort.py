@@ -2,7 +2,7 @@ import unittest
 from comp_swap_container import CompSwapList
 import sortings
 
-class TestSorting(unittest.TestCase):
+class TestInsertionSort(unittest.TestCase):
   def test_insertion_sort(self):
         test_cases = [
             ([], []),
@@ -16,3 +16,5 @@ class TestSorting(unittest.TestCase):
             data = CompSwapList(inp)
             sortings.insertion_sort(data)
             self.assertEqual(list(data), exp)
+if __name__ == "__main__":
+    unittest.main()
