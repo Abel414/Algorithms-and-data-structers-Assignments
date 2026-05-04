@@ -1,4 +1,4 @@
-from sorts import bubble_sort, merge_sort
+from sorts import bubble_sort
 
 def main():
     original = [64, 34, 25, 12, 22, 11, 90]
@@ -7,5 +7,6 @@ def main():
     data1 = original.copy()
     bubble_sort(data1)
     print("\nBubble sort (O(n²)):", data1)
+    
 if __name__ == "__main__":
     main()
