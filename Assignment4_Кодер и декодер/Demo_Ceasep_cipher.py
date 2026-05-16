@@ -12,3 +12,17 @@ if __name__ == "__main__":
     print("\n force all shifts ")
     for shift_attempt, result in brute_force_caesar(encoded):
         print(f"Shift {shift_attempt:2}: {result}")
+
+
+
+#My Output
+Hello, World!
+
+Khoor, Zruog!
+
+Hello, World!
+
+ force all shifts 
+I,pps, xpsme!
+J,oqt, yqtnf!
+Hello, World!
