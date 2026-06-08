@@ -31,10 +31,10 @@ jobs:
 
       - name: Run unit tests with pytest
         run: |
-          pytest base85_test.py -v --tb=short
+          pytest base85/base85_test.py -v --tb=short
 
       - name: Run integration tests (bash)
         run: |
-          chmod +x base85.py
-          chmod +x integration_test.sh
-          ./integration_test.sh
+          chmod +x base85/base85.py
+          chmod +x base85/integration_test.sh
+          base85/integration_test.sh
