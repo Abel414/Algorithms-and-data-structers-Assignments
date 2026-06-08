@@ -1,8 +1,6 @@
-
-from typing import Any
 from comp_swap_container import CompSwapList
 
-def bubble_sort(data: CompSwapList[Any]) -> None:
+def bubble_sort(data):
     n = len(data)
     for i in range(n):
         swapped = False
@@ -13,14 +11,14 @@ def bubble_sort(data: CompSwapList[Any]) -> None:
         if not swapped:
             break
 
-def insertion_sort(data: CompSwapList[Any]) -> None:
+def insertion_sort(data):
     for i in range(1, len(data)):
         j = i
         while j > 0 and data.less(j, j - 1):
             data.swap(j, j - 1)
             j -= 1
 
-def selection_sort(data: CompSwapList[Any]) -> None:
+def selection_sort(data):
     n = len(data)
     for i in range(n):
         min_idx = i
