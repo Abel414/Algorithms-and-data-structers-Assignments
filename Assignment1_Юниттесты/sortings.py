@@ -1,29 +1,33 @@
-from comp_swap_container import CompSwapList
-
-def bubble_sort(data):
-    n = len(data)
+def bubble_sort(arr):
+    n = len(arr)
     for i in range(n):
         swapped = False
         for j in range(n - i - 1):
-            if data.less(j + 1, j):
-                data.swap(j, j + 1)
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 swapped = True
         if not swapped:
             break
+    return arr
 
-def insertion_sort(data):
-    for i in range(1, len(data)):
-        j = i
-        while j > 0 and data.less(j, j - 1):
-            data.swap(j, j - 1)
-            j -= 1
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr.copy()
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
 
-def selection_sort(data):
-    n = len(data)
-    for i in range(n):
-        min_idx = i
-        for j in range(i + 1, n):
-            if data.less(j, min_idx):
-                min_idx = j
-        if min_idx != i:
-            data.swap(i, min_idx)
+def merge(left, right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
